@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navbar-color: #404074;
+  --main-color: #f2f2f2;
+  background: var(--navbar-color);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--navbar-color);
+}
+
+@layer base {
+  main {
+    background: var(--navbar-color);
+    @apply p-4  overflow-y-auto h-full w-full;
+  }
+
+    .container {
+        @apply rounded-lg px-4 bg-main-color flex w-full;
+    }
+
+}
+
